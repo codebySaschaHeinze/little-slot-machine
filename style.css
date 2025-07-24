@@ -13,7 +13,7 @@
 .slot_fields {
   display: flex;
   flex-direction: row;
-  gap: 10px;
+  gap: 16px;
 }
 
 #one,
@@ -47,11 +47,13 @@
 }
 
 .win_container {
-  height: 200px;
-  width: 200px;
+  height: 150px;
+  width: 220px;
   background-color: white;
   position: absolute;
   z-index: 10;
+  border-radius: 10px;
+  margin-top: 20px;
 }
 
 .win_content {

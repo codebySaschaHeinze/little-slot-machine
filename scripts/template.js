@@ -8,7 +8,7 @@ function winTemplate(result, tries) {
         <button onclick="randomIt()" class="slot_btn">Viel Glück</button>
         <div id="win-container" class="win_container d_none">
             <div class="win_content">    
-                <p>Gewonnen! <br> Du hast ${tries} Versuche gebraucht!</p>
+                <p>Gewonnen! <br> <br> Du hast ${tries} Versuche gebraucht!</p>
                 <button id="back-btn" class="back_btn">Zurück</button>
             </div>
         </div>
