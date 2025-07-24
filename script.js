@@ -1,17 +1,10 @@
-let colors = [
-  "aqua",
-  "chocolate",
-  "Cornflowerblue",
-  "crimson",
-  "gold",
-  "darkcyan",
-  "mediumorchid",
-];
+let tries = 0;
+
+let colors = ["aqua", "chocolate", "Cornflowerblue", "crimson", "gold", "darkcyan", "mediumorchid"];
 
 function init() {
-  randomIt();
+  slotBtnClick();
 }
-let tries = 0;
 
 function generateColors() {
   let random1 = Math.floor(Math.random() * 7) + 1;
@@ -30,6 +23,12 @@ function generateColors() {
   };
 }
 
+function slotBtnClick() {
+  const btn = document.getElementById("slot-btn");
+  btn.addEventListener("click", randomIt);
+  randomIt();
+}
+
 function randomIt() {
   tries++;
   let result = generateColors();
@@ -37,10 +36,17 @@ function randomIt() {
     let winRef = document.getElementById("content");
     winRef.innerHTML = "";
     winRef.innerHTML = winTemplate(result, tries);
+    const btn = document.getElementById("back-btn");
+    btn.addEventListener("click", winAlert);
+    document.getElementById("win-container").classList.remove("d_none");
     tries = 0;
   } else {
     let loseRef = document.getElementById("content");
     loseRef.innerHTML = "";
     loseRef.innerHTML = loseTemplate(result, tries);
   }
+}
+
+function winAlert() {
+  document.getElementById("win-container").classList.add("d_none");
 }

@@ -1,0 +1,17 @@
+h1 {
+  margin-bottom: 40px;
+}
+
+.win_content p {
+  margin-top: 20px;
+}
+
+.win_content button {
+  margin-top: 30px;
+  background-color: yellow;
+  border-radius: 4px;
+}
+
+.win_content button:hover {
+  transform: scale(1.05);
+}

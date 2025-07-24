@@ -1,23 +1,28 @@
 function winTemplate(result, tries) {
   return `
-        <p>Gewonnen! Du hast ${tries} Versuche gebraucht!</p>
-            <div class="slot-fields">
-                <p style="background-color: ${result.color1}" class="slot-field" id="one"></p>
-                <p style="background-color: ${result.color2}" class="slot-field" id="two"></p>
-                <p style="background-color: ${result.color3}" class="slot-field" id="three"></p>
+            <div class="slot_fields">
+                <p style="background-color: ${result.color1}" class="slot_field" id="one"></p>
+                <p style="background-color: ${result.color2}" class="slot_field" id="two"></p>
+                <p style="background-color: ${result.color3}" class="slot_field" id="three"></p>
             </div>
-        <button onclick="randomIt()" class="random-button">Viel Glück</button>
+        <button onclick="randomIt()" class="slot_btn">Viel Glück</button>
+        <div id="win-container" class="win_container d_none">
+            <div class="win_content">    
+                <p>Gewonnen! <br> Du hast ${tries} Versuche gebraucht!</p>
+                <button id="back-btn" class="back_btn">Zurück</button>
+            </div>
+        </div>
         `;
 }
 
-function loseTemplate(result, tries) {
+function loseTemplate(result) {
   return `
-        <p>${tries}. Versuch</p>
-            <div class="slot-fields">
-                <p style="background-color: ${result.color1}" class="slot-field" id="one"></p>
-                <p style="background-color: ${result.color2}" class="slot-field" id="two"></p>
-                <p style="background-color: ${result.color3}" class="slot-field" id="three"></p>
+            <div class="slot_fields">
+                <p style="background-color: ${result.color1}" class="slot_field" id="one"></p>
+                <p style="background-color: ${result.color2}" class="slot_field" id="two"></p>
+                <p style="background-color: ${result.color3}" class="slot_field" id="three"></p>
             </div>
-            <button onclick="randomIt()" class="random-button">Viel Glück</button>
+            <button onclick="randomIt()" class="slot_btn">Viel Glück</button>
+            <div id="win-container" class="win_container d_none">
         `;
 }

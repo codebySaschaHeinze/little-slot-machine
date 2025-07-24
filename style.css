@@ -1,3 +1,7 @@
+.d_none {
+  display: none;
+}
+
 #content {
   display: flex;
   flex-direction: column;
@@ -6,7 +10,7 @@
   gap: 10px;
 }
 
-.slot-fields {
+.slot_fields {
   display: flex;
   flex-direction: row;
   gap: 10px;
@@ -21,10 +25,10 @@
   box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.295);
   text-align: center;
   background-color: rgb(217, 255, 0);
-  margin-top: 40px;
+  margin-top: 30px;
 }
 
-.random-button {
+.slot_btn {
   width: 90px;
   height: 30px;
   font-size: 1rem;
@@ -33,12 +37,26 @@
   border: 1px solid black;
   border-radius: 5px;
   box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.295);
-  margin-top: 40px;
+  margin-top: 30px;
 }
 
-.random-button:hover {
+.slot_btn:hover {
   transform: scale(1.03);
-
   color: antiquewhite;
   background-color: black;
+}
+
+.win_container {
+  height: 200px;
+  width: 200px;
+  background-color: white;
+  position: absolute;
+  z-index: 10;
+}
+
+.win_content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
